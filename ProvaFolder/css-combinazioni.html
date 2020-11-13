@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Combinations</title>
+	<style>
+		/* prova con elemento.classe */
+		p.blueback {
+			background-color: blue;
+		}
+
+		/* Prova con direct child */
+		article > p {
+			color: pink;
+		}
+
+		/* Prova child non diretto */
+		div p {
+			background-color: black;
+			color: white;
+		}
+
+		/* Prova con p all'interno di qualcosa con classe highlight*/
+		.highlight p {
+			background-color: green;
+		}
+
+		.highlight {
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<p>
+		It must be normal.
+	</p>
+	<div></div>
+	<p class="blueback">
+		It must have a blue background.
+	</p>
+	<div></div>
+	<article>
+		If I have an article with a p-child in it, but not a direct child as following
+		<big>
+		<p>
+			it must be normal.
+		</p>
+		</big>
+	</article>
+	<div></div>
+	<article><p>This has to be pink, cause it is a direct child.</p></article>
+	<div class="highlight">
+		This is a div element with class highlight. It must have a yellow background.
+		<p> This must have a green one.</p>
+	</div>
+</body>
+</html>
